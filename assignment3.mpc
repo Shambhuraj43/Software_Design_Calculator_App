@@ -1,0 +1,50 @@
+project (output){
+	exename = output
+	install = .
+
+	specific (make, gnuance) {
+		compile_flags += -std=c++11
+	}
+
+	Source_Files {
+		driver.cpp
+		Calculate.cpp
+		ExprNumber.cpp
+		BinaryExprCommand.cpp
+		Add.cpp
+		Subtract.cpp
+		Multiply.cpp
+		Divide.cpp
+		Mod.cpp
+		Number.cpp
+		CommandsFactory.cpp
+		CommandInterface.cpp
+
+
+	}
+	Template_Files {
+		Array_Base.cpp
+		Array.cpp
+		Stack.cpp
+		Iterator.cpp
+	}
+	Header_Files{
+		Array_Base.h
+		Array.h
+		Stack.h
+    ExprNumber.h
+		BinaryExprCommand.h
+		Add.h
+    Subtract.h
+    Multiply.h
+    Divide.h
+    Number.h
+		Iterator.h
+		CommandFactory.h
+	}
+	Inline_Files{
+		Array_Base.inl
+		Array.inl
+		Stack.inl
+	}
+}
